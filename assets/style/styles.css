@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:sans-serif;
+    background-image:url("../img/bg.jpg");
+    background-size:100% 100%;
+}
+main{
+    display:flex;
+    align-items:center;
+    background-color:#ffffff73;
+    border-radius:5px;
+    box-shadow:5px 5px 8px #000000;
+    backdrop-filter:blur(5px);
+    padding:30px;
+}
+main section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+section article{
+    display:flex;
+    flex-direction:column;
+    gap:0.5em;
+}
+
+/*estilização dos campos de entrada e botões*/
+input{
+    width:340px;
+}
+#enter_title{
+    height:40px;
+    border:1px solid #e26666;
+    border-radius:5px;
+    text-indent:10px;
+    font-weight:bolder;
+    outline:0;
+}
+.buttons{
+    display:flex;
+    justify-content:space-arround;
+    flex-direction:row;
+    margin:0.5em 0;
+}
+.buttons button{
+    border:none;
+    padding:0.2em;
+    width:70px;
+    color:#fff;
+    cursor:pointer;
+}
+.buttons button:first-child{
+    background-color:#e26666;
+}
+.buttons button:last-child{
+    background-color:#5ba882;
+}
+.buttons button:hover{
+    opacity:0.8;
+}
+
+/*saída de dados*/
+article label{
+    color:#fff;
+    font-size:12px;
+    margin-bottom:-10px;
+    font-weight:bolder;
+}
+.data input{
+    text-indent:10px;
+    height:22px;
+    border:1px solid #5ba882;
+    outline:0;
+}
+textarea{
+    max-height:60px;
+    border:1px solid #90e5bb;
+    outline:0;
+    margin-top:5px;
+    padding:5px;
+    overflow:scroll;
+}
+textarea::-webkit-scrollbar{
+    display:none;
+}
