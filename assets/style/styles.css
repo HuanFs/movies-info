@@ -11,6 +11,7 @@ body{
     font-family:sans-serif;
     background-image:url("../img/bg.jpg");
     background-size:100% 100%;
+    backdrop-filter:blur(1px)
 }
 main{
     display:flex;
@@ -45,7 +46,7 @@ input{
 }
 .enter_title{
     height:40px;
-    border:1px solid #e26666;
+    border:1px solid #5ba882;
     border-radius:5px;
     text-indent:10px;
     font-weight:bolder;
@@ -97,4 +98,12 @@ textarea{
 }
 textarea::-webkit-scrollbar{
     display:none;
+}
+@media screen and (max-width:400px){
+    main{
+        width:340px;
+    }
+    input{
+        width:300px;
+    }
 }

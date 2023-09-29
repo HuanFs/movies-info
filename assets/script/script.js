@@ -13,28 +13,33 @@ btn_search.addEventListener("click", SearchMovie);
 btn_reset.addEventListener("click", Clear);
 //função que processa e exibe os eresultados
 async function SearchMovie(){
-    movie_title.setAttribute("class","Title");
     let title_of_movie = movie_title.value;
-    try{
-        let url = await fetch(`https://www.omdbapi.com/?apikey=cdba40d8&t=${title_of_movie}`);
-        let response = await url.json();
-        title.value=response.Title;
-        setTimeout((x)=>{
-         response.Title=='N/A'?year.value="Não encontrado":year.value=response.Year;
-         },1000);
-        setTimeout((x)=>{
-            response.Actors=='N/A'?actors.value="Não encontrado":actors.value=response.Actors;
-        },2000);
-        setTimeout((x)=>{
-            response.Director=='N/A'?direction.value="Não encontrado":direction.value=response.Director;
-        },3000);
-        setTimeout((x)=>{
-            response.Plot=='N/A'?sinopse.innerTextL="Não encontrado":sinopse.innerText=response.Plot;
-        },4000);
+    if(movie_title.value==''){
+        alert("Por Favor, Informe um Título!")
     }
-    catch{(error)=>{
-        alert("Aconteçeu um erro com a sua solicitação, por favor, tente mais tarde")
-    }}
+    else{
+        try{
+            movie_title.setAttribute("class","Title");
+            let url = await fetch(`https://www.omdbapi.com/?apikey=cdba40d8&t=${title_of_movie}`);
+            let response = await url.json();
+            title.value=response.Title;
+            setTimeout((x)=>{
+             response.Title=='N/A'?year.value="Não encontrado":year.value=response.Year;
+             },1000);
+            setTimeout((x)=>{
+                response.Actors=='N/A'?actors.value="Não encontrado":actors.value=response.Actors;
+            },2000);
+            setTimeout((x)=>{
+                response.Director=='N/A'?direction.value="Não encontrado":direction.value=response.Director;
+            },3000);
+            setTimeout((x)=>{
+                response.Plot=='N/A'?sinopse.innerTextL="Não encontrado":sinopse.innerText=response.Plot;
+            },4000);
+        }
+        catch{(error)=>{
+            alert("Aconteçeu um erro com a sua solicitação, por favor, tente mais tarde")
+        }}
+    }
 }
 //função que limpa os campos
 function Clear(){
