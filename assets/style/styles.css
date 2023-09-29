@@ -26,6 +26,13 @@ main section{
     flex-direction:column;
     align-items:center;
 }
+.Title{
+    border:none;
+    text-align:center;
+    font-size:36px;
+    color:#fff;
+    background-color:transparent;
+}
 section article{
     display:flex;
     flex-direction:column;
@@ -36,7 +43,7 @@ section article{
 input{
     width:340px;
 }
-#enter_title{
+.enter_title{
     height:40px;
     border:1px solid #e26666;
     border-radius:5px;

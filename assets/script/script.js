@@ -1,5 +1,5 @@
 //campos de entrada
-let movie_title = document.querySelector("#enter_title");
+let movie_title = document.querySelector(".enter_title");
 let btn_search = document.querySelectorAll(".buttons button")[1]
 let btn_reset = document.querySelectorAll(".buttons button")[0]
 //campos de saida
@@ -13,6 +13,7 @@ btn_search.addEventListener("click", SearchMovie);
 btn_reset.addEventListener("click", Clear);
 //função que processa e exibe os eresultados
 async function SearchMovie(){
+    movie_title.setAttribute("class","Title");
     let title_of_movie = movie_title.value;
     try{
         let url = await fetch(`https://www.omdbapi.com/?apikey=cdba40d8&t=${title_of_movie}`);
@@ -42,4 +43,5 @@ function Clear(){
         data.value="";
     })
     sinopse.innerText="";
+    movie_title.setAttribute("class","enter_title");
 }
