@@ -31,7 +31,8 @@ main section{
     border:none;
     text-align:center;
     font-size:36px;
-    color:#fff;
+    color:#000;
+    font-weight:bolder;
     background-color:transparent;
 }
 section article{
@@ -66,10 +67,10 @@ input{
     cursor:pointer;
 }
 .buttons button:first-child{
-    background-color:#e26666;
+    background-color:#f25353;
 }
 .buttons button:last-child{
-    background-color:#5ba882;
+    background-color:#4ed793;
 }
 .buttons button:hover{
     opacity:0.8;
